@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/media.css">
+</head>
+<body>
+
+
+	<!-- Accordion -->
+	<div id="accordion">
+	    <h3>Section 1</h3>
+	    <div>
+	      <p>Content for section 1.</p>
+	    </div>
+	    <h3>Section 2</h3>
+	    <div>
+	      <p>Content for section 2.</p>
+	    </div>
+  	</div>
+
+  	<!-- Auto complete -->
+  	<div class="ui-widget">
+	    <label for="tags">Tags: </label>
+	    <input id="tags">
+  	</div>
+
+  	<!-- Button -->
+  	<button id="button">A jQuery UI Button</button>
+
+  	<!-- Date picker -->
+  	<label for="datepicker">Select a date: </label>
+  	<input type="text" id="datepicker">
+
+  	<!-- Dialog -->
+  	<div id="dialog" title="Basic dialog">
+    	<p>This is a dialog box using jQuery UI.</p>
+  	</div>
+
+  	<!-- Menu -->
+  	<ul id="menu">
+    <li><a href="#">Item 1</a></li>
+    <li><a href="#">Item 2</a>
+      <ul>
+        <li><a href="#">Sub Item 1</a></li>
+        <li><a href="#">Sub Item 2</a></li>
+      </ul>
+    </li>
+  	</ul>
+
+  	<!-- progressbar -->
+  	<div id="progressbar"></div>
+
+  	<!-- slider -->
+  	<div id="slider"></div>
+
+  	<!-- spinner -->
+  	<input id="spinner" name="value">
+
+  	<!-- tabs -->
+  	<div id="tabs">
+    <ul>
+      <li><a href="#tabs-1">Tab 1</a></li>
+      <li><a href="#tabs-2">Tab 2</a></li>
+    </ul>
+    <div id="tabs-1">
+      <p>Content for tab 1.</p>
+    </div>
+    <div id="tabs-2">
+      <p>Content for tab 2.</p>
+    </div>
+  	</div>
+
+  	<!-- tooltips -->
+  	<p title="This is a tooltip!">Hover over this text to see the tooltip.</p>
+  	<!-- selectmenu -->
+  	<label for="speed">Select a speed:</label>
+	  <select name="speed" id="speed">
+	    <option>Slower</option>
+	    <option>Slow</option>
+	    <option selected="selected">Medium</option>
+	    <option>Fast</option>
+	    <option>Faster</option>
+	  </select>
+
+  	<!-- dialog with buttons -->
+  	<div id="dialog-confirm" title="Empty the recycle bin?">
+    <p>These items will be permanently deleted and cannot be recovered. Are you sure?</p>
+  	</div>
+
+  	<!-- draggable -->
+  	<div id="draggable" class="ui-widget-content">
+    <p>Drag me around</p>
+  	</div>
+
+  	<!-- droppable -->
+  	<div id="draggable2" class="ui-widget-content">
+    <p>Drag me</p>
+  	</div>
+  	<div id="droppable" class="ui-widget-header">
+    <p>Drop here</p>
+  	</div>
+
+  	<!-- JS EXAMPLES -->
+  	<!-- Example 51: Adding Two Numbers -->
+<h2>Example 51: Adding Two Numbers</h2>
+<button onclick="addNumbers()">Add Numbers</button>
+<p id="addNumbersResult"></p>
+
+<!-- Example 52: Subtracting Two Numbers -->
+<h2>Example 52: Subtracting Two Numbers</h2>
+<button onclick="subtractNumbers()">Subtract Numbers</button>
+<p id="subtractNumbersResult"></p>
+
+<!-- Example 53: Multiplying Two Numbers -->
+<h2>Example 53: Multiplying Two Numbers</h2>
+<button onclick="multiplyNumbers()">Multiply Numbers</button>
+<p id="multiplyNumbersResult"></p>
+
+<!-- Example 54: Dividing Two Numbers -->
+<h2>Example 54: Dividing Two Numbers</h2>
+<button onclick="divideNumbers()">Divide Numbers</button>
+<p id="divideNumbersResult"></p>
+
+<!-- Example 55: Finding Remainder -->
+<h2>Example 55: Finding Remainder</h2>
+<button onclick="findRemainder()">Find Remainder</button>
+<p id="findRemainderResult"></p>
+
+<!-- Example 56: Calculating Power -->
+<h2>Example 56: Calculating Power</h2>
+<button onclick="calculatePower()">Calculate Power</button>
+<p id="calculatePowerResult"></p>
+
+<!-- Example 57: Calculating Square Root -->
+<h2>Example 57: Calculating Square Root</h2>
+<button onclick="calculateSquareRoot()">Calculate Square Root</button>
+<p id="calculateSquareRootResult"></p>
+
+<!-- Example 58: Generating a Random Number -->
+<h2>Example 58: Generating a Random Number</h2>
+<button onclick="generateRandomNumber()">Generate Random Number</button>
+<p id="randomNumberResult"></p>
+
+<!-- Example 59: Checking Even or Odd -->
+<h2>Example 59: Checking Even or Odd</h2>
+<button onclick="checkEvenOdd()">Check Even or Odd</button>
+<p id="evenOddResult"></p>
+
+<!-- Example 60: Using Math.PI -->
+<h2>Example 60: Using Math.PI</h2>
+<button onclick="useMathPI()">Use Math.PI</button>
+<p id="mathPIResult"></p>
+
+<!-- Example 61: Using Math.floor -->
+<h2>Example 61: Using Math.floor</h2>
+<button onclick="useMathFloor()">Use Math.floor</button>
+<p id="mathFloorResult"></p>
+
+<!-- Example 62: Using Math.ceil -->
+<h2>Example 62: Using Math.ceil</h2>
+<button onclick="useMathCeil()">Use Math.ceil</button>
+<p id="mathCeilResult"></p>
+
+<!-- Example 63: Using Math.round -->
+<h2>Example 63: Using Math.round</h2>
+<button onclick="useMathRound()">Use Math.round</button>
+<p id="mathRoundResult"></p>
+
+<!-- Example 64: Finding Maximum Number -->
+<h2>Example 64: Finding Maximum Number</h2>
+<button onclick="findMax()">Find Max</button>
+<p id="maxResult"></p>
+
+<!-- Example 65: Finding Minimum Number -->
+<h2>Example 65: Finding Minimum Number</h2>
+<button onclick="findMin()">Find Min</button>
+<p id="minResult"></p>
+
+<!-- Example 66: Converting String to Number -->
+<h2>Example 66: Converting String to Number</h2>
+<button onclick="convertStringToNumber()">Convert String to Number</button>
+<p id="stringToNumberResult"></p>
+
+<!-- Example 67: Converting Number to String -->
+<h2>Example 67: Converting Number to String</h2>
+<button onclick="convertNumberToString()">Convert Number to String</button>
+<p id="numberToStringResult"></p>
+
+<!-- Example 68: String Length -->
+<h2>Example 68: String Length</h2>
+<button onclick="stringLength()">String Length</button>
+<p id="stringLengthResult"></p>
+
+<!-- Example 69: String Index Of -->
+<h2>Example 69: String Index Of</h2>
+<button onclick="stringIndexOf()">String Index Of</button>
+<p id="stringIndexOfResult"></p>
+
+<!-- Example 70: String Substring -->
+<h2>Example 70: String Substring</h2>
+<button onclick="stringSubstring()">String Substring</button>
+<p id="stringSubstringResult"></p>
+
+<!-- Example 71: Converting to Uppercase -->
+<h2>Example 71: Converting to Uppercase</h2>
+<button onclick="convertToUppercase()">Convert to Uppercase</button>
+<p id="uppercaseResult"></p>
+
+<!-- Example 72: Converting to Lowercase -->
+<h2>Example 72: Converting to Lowercase</h2>
+<button onclick="convertToLowercase()">Convert to Lowercase</button>
+<p id="lowercaseResult"></p>
+
+<!-- Example 73: Replacing String Content -->
+<h2>Example 73: Replacing String Content</h2>
+<button onclick="replaceStringContent()">Replace String Content</button>
+<p id="replaceStringContentResult"></p>
+
+<!-- Example 74: Splitting a String -->
+<h2>Example 74: Splitting a String</h2>
+<button onclick="splitString()">Split String</button>
+<p id="splitStringResult"></p>
+
+<!-- Example 75: Joining an Array -->
+<h2>Example 75: Joining an Array</h2>
+<button onclick="joinArray()">Join Array</button>
+<p id="joinArrayResult"></p>
+
+<!-- Example 76: Trimming a String -->
+<h2>Example 76: Trimming a String</h2>
+<button onclick="trimString()">Trim String</button>
+<p id="trimStringResult"></p>
+
+<!-- Example 77: Creating a Date Object -->
+<h2>Example 77: Creating a Date Object</h2>
+<button onclick="createDate()">Create Date</button>
+<p id="dateResult"></p>
+
+<!-- Example 78: Getting Current Date -->
+<h2>Example 78: Getting Current Date</h2>
+<button onclick="getCurrentDate()">Get Current Date</button>
+<p id="currentDateResult"></p>
+
+<!-- Example 79: Getting Day of the Week -->
+<h2>Example 79: Getting Day of the Week</h2>
+<button onclick="getDayOfWeek()">Get Day of the Week</button>
+<p id="dayOfWeekResult"></p>
+
+<!-- Example 80: Getting Month of the Year -->
+<h2>Example 80: Getting Month of the Year</h2>
+<button onclick="getMonthOfYear()">Get Month of the Year</button>
+<p id="monthOfYearResult"></p>
+
+<!-- Example 81: Getting Year -->
+<h2>Example 81: Getting Year</h2>
+<button onclick="getYear()">Get Year</button>
+<p id="yearResult"></p>
+
+<!-- Example 82: Getting Hours -->
+<h2>Example 82: Getting Hours</h2>
+<button onclick="getHours()">Get Hours</button>
+<p id="hoursResult"></p>
+
+<!-- Example 83: Getting Minutes -->
+<h2>Example 83: Getting Minutes</h2>
+<button onclick="getMinutes()">Get Minutes</button>
+<p id="minutesResult"></p>
+
+<!-- Example 84: Getting Seconds -->
+<h2>Example 84: Getting Seconds</h2>
+<button onclick="getSeconds()">Get Seconds</button>
+<p id="secondsResult"></p>
+
+<!-- Example 85: Setting Hours -->
+<h2>Example 85: Setting Hours</h2>
+<button onclick="setHours()">Set Hours</button>
+<p id="setHoursResult"></p>
+
+<!-- Example 86: Setting Minutes -->
+<h2>Example 86: Setting Minutes</h2>
+<button onclick="setMinutes()">Set Minutes</button>
+<p id="setMinutesResult"></p>
+
+<!-- Example 87: Setting Seconds -->
+<h2>Example 87: Setting Seconds</h2>
+<button onclick="setSeconds()">Set Seconds</button>
+<p id="setSecondsResult"></p>
+
+<!-- Example 88: Creating a Timer -->
+<h2>Example 88: Creating a Timer</h2>
+<button onclick="startTimer()">Start Timer</button>
+<p id="timerResult"></p>
+
+<!-- Example 89: Stopping a Timer -->
+<h2>Example 89: Stopping a Timer</h2>
+<button onclick="stopTimer()">Stop Timer</button>
+
+<!-- Example 90: Getting Element by Query Selector -->
+<h2>Example 90: Getting Element by Query Selector</h2>
+<button onclick="getElementByQuerySelector()">Get Element by Query Selector</button>
+<p id="querySelectorResult"></p>
+
+<!-- Example 91: Getting Elements by Query Selector All -->
+<h2>Example 91: Getting Elements by Query Selector All</h2>
+<button onclick="getElementsByQuerySelectorAll()">Get Elements by Query Selector All</button>
+<p id="querySelectorAllResult"></p>
+
+<!-- Example 92: Checking Checkbox Status -->
+<h2>Example 92: Checking Checkbox Status</h2>
+<input type="checkbox" id="checkbox">
+<button onclick="checkCheckboxStatus()">Check Checkbox Status</button>
+<p id="checkboxStatusResult"></p>
+
+<!-- Example 93: Enabling a Button -->
+<h2>Example 93: Enabling a Button</h2>
+<button id="enableButton" disabled>Button</button>
+<button onclick="enableButton()">Enable Button</button>
+
+<!-- Example 94: Disabling a Button -->
+<h2>Example 94: Disabling a Button</h2>
+<button id="disableButton">Button</button>
+<button onclick="disableButton()">Disable Button</button>
+
+<!-- Example 95: Changing Image Source on Hover -->
+<h2>Example 95: Changing Image Source on Hover</h2>
+<img id="hoverImage" src="image1.jpg" alt="Image" onmouseover="changeImageOnHover()" onmouseout="resetImage()">
+<p id="hoverImageResult"></p>
+
+<!-- Example 96: Playing Audio -->
+<h2>Example 96: Playing Audio</h2>
+<audio id="audio" src="audio.mp3"></audio>
+<button onclick="playAudio()">Play Audio</button>
+
+<!-- Example 97: Pausing Audio -->
+<h2>Example 97: Pausing Audio</h2>
+<audio id="audio2" src="audio.mp3"></audio>
+<button onclick="playAudio2()">Play Audio</button>
+<button onclick="pauseAudio2()">Pause Audio</button>
+
+<!-- Example 98: Creating an Iframe -->
+<h2>Example 98: Creating an Iframe</h2>
+<button onclick="createIframe()">Create Iframe</button>
+<p id="iframeResult"></p>
+
+<!-- Example 99: Changing Iframe Source -->
+<h2>Example 99: Changing Iframe Source</h2>
+<iframe id="iframe" src="about:blank"></iframe>
+<button onclick="changeIframeSource()">Change Iframe Source</button>
+
+<!-- Example 100: Removing Iframe -->
+<h2>Example 100: Removing Iframe</h2>
+<button onclick="removeIframe()">Remove Iframe</button>
+
+
+<!-- JQ EXAMPLES -->
+
+
+<!-- Example 1: Hide a div -->
+  <div id="div1">This is a div that will be hidden.</div>
+  <button id="hideDiv1">Hide div</button>
+
+  <!-- Example 2: Show a div -->
+  <div id="div2">This is a hidden div that will be shown.</div>
+  <button id="showDiv2">Show div</button>
+
+  <!-- Example 3: Toggle visibility of a div -->
+  <div id="div3">This div will toggle visibility.</div>
+  <button id="toggleDiv3">Toggle div</button>
+
+  <!-- Example 4: Fade out a div -->
+  <div id="div4">This div will fade out.</div>
+  <button id="fadeOutDiv4">Fade out</button>
+
+  <!-- Example 5: Fade in a div -->
+  <div id="div5">This div will fade in.</div>
+  <button id="fadeInDiv5">Fade in</button>
+
+  <!-- Example 6: Slide up a div -->
+  <div id="div6">This div will slide up.</div>
+  <button id="slideUpDiv6">Slide up</button>
+
+  <!-- Example 7: Slide down a div -->
+  <div id="div7">This div will slide down.</div>
+  <button id="slideDownDiv7">Slide down</button>
+
+  <!-- Example 8: Slide toggle a div -->
+  <div id="div8">This div will slide toggle.</div>
+  <button id="slideToggleDiv8">Slide toggle</button>
+
+  <!-- Example 9: Change text of a paragraph -->
+  <p id="p9">This is a paragraph.</p>
+  <button id="changeText9">Change text</button>
+
+  <!-- Example 10: Change HTML content of a div -->
+  <div id="div10">Old content</div>
+  <button id="changeHtml10">Change HTML</button>
+
+  <!-- Example 11: Append content to a div -->
+  <div id="div11">Initial content.</div>
+  <button id="appendDiv11">Append content</button>
+
+  <!-- Example 12: Prepend content to a div -->
+  <div id="div12">Initial content.</div>
+  <button id="prependDiv12">Prepend content</button>
+
+  <!-- Example 13: Add a CSS class to a div -->
+  <div id="div13">This div will have a class added.</div>
+  <button id="addClass13">Add class</button>
+
+  <!-- Example 14: Remove a CSS class from a div -->
+  <div id="div14" class="blue">This div has a class that will be removed.</div>
+  <button id="removeClass14">Remove class</button>
+
+  <!-- Example 15: Toggle a CSS class -->
+  <div id="div15" class="blue">This div has a class that will toggle.</div>
+  <button id="toggleClass15">Toggle class</button>
+
+  <!-- Example 16: Change CSS property -->
+  <div id="div16">This div will change color.</div>
+  <button id="changeCss16">Change color</button>
+
+  <!-- Example 17: Get input value -->
+  <input type="text" id="input17" placeholder="Enter text here">
+  <button id="getValue17">Get value</button>
+  <p id="output17"></p>
+
+  <!-- Example 18: Set input value -->
+  <input type="text" id="input18">
+  <button id="setValue18">Set value</button>
+
+  <!-- Example 19: Disable a button -->
+  <button id="button19">This button will be disabled</button>
+  <button id="disableButton19">Disable button</button>
+
+  <!-- Example 20: Enable a button -->
+  <button id="button20" disabled>This button will be enabled</button>
+  <button id="enableButton20">Enable button</button>
+
+  <!-- Example 21: Handle click event -->
+  <button id="clickButton21">Click me</button>
+  <p id="output21"></p>
+
+  <!-- Example 22: Handle double-click event -->
+  <button id="dblClickButton22">Double-click me</button>
+  <p id="output22"></p>
+
+  <!-- Example 23: Handle hover event -->
+  <div id="hoverDiv23">Hover over me!</div>
+  <p id="output23"></p>
+
+  <!-- Example 24: Animate div width -->
+  <div id="div24"></div>
+  <button id="animateDiv24">Animate width</button>
+
+  <!-- Example 25: Animate multiple CSS properties -->
+  <div id="div25"></div>
+  <button id="animateDiv25">Animate properties</button>
+
+  <!-- Example 26: Animate with callback -->
+  <div id="div26"></div>
+  <button id="animateDiv26">Animate with callback</button>
+
+  <!-- Example 27: Show alert on page load -->
+  <p id="p27">Page load example.</p>
+
+  <!-- Example 28: Append item to list -->
+  <ul id="list28">
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+  <button id="appendItem28">Append item</button>
+
+  <!-- Example 29: Hide all paragraphs -->
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+  <button id="hideAllParagraphs29">Hide all paragraphs</button>
+
+  <!-- Example 30: Fade in and out with delay -->
+  <div id="div30"></div>
+  <button id="fadeInOut30">Fade in and out</button>
+
+  <!-- Example 31: Get attribute value -->
+  <img id="image31" src="assets/portfolio.png" alt="Placeholder Image">
+  <button id="getAttr31">Get alt attribute</button>
+
+  <!-- Example 32: Set attribute value -->
+  <img id="image32" src="assets/portfolio2.png" alt="Placeholder Image">
+  <button id="setAttr32">Set alt attribute</button>
+
+  <!-- Example 33: Remove element -->
+  <p id="p33">This paragraph will be removed.</p>
+  <button id="removeP33">Remove paragraph</button>
+
+  <!-- Example 34: Empty an element -->
+  <div id="div34">
+    <p>This content will be removed.</p>
+  </div>
+  <button id="emptyDiv34">Empty div</button>
+
+  <!-- Example 35: Clone an element -->
+  <div id="div35">This will be cloned.</div>
+  <button id="cloneDiv35">Clone div</button>
+
+  <!-- Example 36: Change image source -->
+  <img id="image36" src="assets/portfolio3.png" alt="Placeholder Image">
+  <button id="changeSrc36">Change image source</button>
+
+  <!-- Example 37: Check if checkbox is checked -->
+  <input type="checkbox" id="checkbox37">Check me</input>
+  <button id="isChecked37">Is checked?</button>
+
+  <!-- Example 38: Disable a form field -->
+  <input type="text" id="input38" placeholder="This will be disabled">
+  <button id="disableInput38">Disable input</button>
+
+  <!-- Example 39: Enable a form field -->
+  <input type="text" id="input39" disabled placeholder="This will be enabled">
+  <button id="enableInput39">Enable input</button>
+
+  <!-- Example 40: Focus on an input field -->
+  <input type="text" id="input40" placeholder="Focus on me">
+  <button id="focusInput40">Focus</button>
+
+  <!-- Example 41: Blur an input field -->
+  <input type="text" id="input41" placeholder="Blur me">
+  <button id="blurInput41">Blur</button>
+
+  <!-- Example 42: Select content in input -->
+  <input type="text" id="input42" value="Select this text">
+  <button id="selectText42">Select text</button>
+
+  <!-- Example 43: Add content after a div -->
+  <div id="div43">This content will have something added after.</div>
+  <button id="addAfterDiv43">Add after</button>
+
+  <!-- Example 44: Add content before a div -->
+  <div id="div44">This content will have something added before.</div>
+  <button id="addBeforeDiv44">Add before</button>
+
+  <!-- Example 45: Trigger a click event -->
+  <button id="triggerClick45">Trigger click</button>
+  <button id="clickMeButton45">Click me!</button>
+
+  <!-- Example 46: Fade toggle a div -->
+  <div id="div46"></div>
+  <button id="fadeToggleDiv46">Fade toggle</button>
+
+  <!-- Example 47: Detect scroll event -->
+  <div id="scrollDiv47">
+    <p>Scroll inside me!</p>
+    <p>More content</p>
+    <p>Even more content</p>
+  </div>
+  <p id="scrollOutput47"></p>
+
+  <!-- Example 48: Load content from another file -->
+  <div id="div48">Content will be loaded here.</div>
+  <button id="loadContent48">Load content</button>
+
+  <!-- Example 49: Get the size of a div -->
+  <div id="div49"></div>
+  <button id="getSize49">Get size</button>
+
+  <!-- Example 50: Scroll to a specific element -->
+  <p id="scrollToP50">Scroll to me!</p>
+  <button id="scrollToButton50">Scroll to paragraph</button>
+
+
+  <!-- Counter Examples -->
+
+   <h1 id="counter1">0</h1>
+
+
+   <h1 id="counter2">10</h1>
+
+   <h1 id="counter3">0</h1>
+
+
+
+   
+
+	<script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
